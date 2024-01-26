@@ -1,0 +1,45 @@
+---
+const path = Astro.url.pathname.split('/').filter((item) => item !== '');
+console.log(path);
+const splitToTitleCase = (str: string) => {
+  return str
+    .split('-')
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ');
+};
+
+console.log(path);
+
+const buildHref = (index: number) => {
+  return '/' + path.slice(0, index + 1).join('/');
+};
+---
+
+{
+  path.length > 0 && (
+    <div class="limit flex">
+      <a href="/" class="link">
+        Home
+      </a>
+      {path.slice(0, -1).map((item, index) => {
+        item = splitToTitleCase(item);
+        return (
+          <>
+            <span>/</span>
+            <a href={buildHref(index)}>{item}</a>
+          </>
+        );
+      })}
+    </div>
+  )
+}
+<style>
+  a {
+    display: inline-block;
+  }
+  .flex {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5ch;
+  }
+</style>

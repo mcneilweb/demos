@@ -1,0 +1,15 @@
+:root {
+  /* Colors */
+  --main: hsl(27 83% 52%);
+  --light: hsl(60 12% 93%);
+  --dark: hsl(220 16% 18%);
+  --accent-light: hsl(175 14% 63%);
+  --accent-dark: hsl(17 51% 50%);
+
+  /* Semantics */
+  --bg: var(--light);
+  --text: var(--dark);
+
+  /* Dimensions */
+  --max-width: 1200px;
+}

@@ -1,0 +1,25 @@
+---
+import Layout from '~/layouts/Layout.astro';
+const demos = [
+  {
+    display: 'Web Components',
+    url: '/web-components'
+  }
+];
+const title = '@mcneilweb/demos';
+---
+
+<Layout title={title}>
+  <main class="limit">
+    <h1>{title}</h1>
+    <ul>
+      {
+        demos.map((demo) => (
+          <li>
+            <a href={demo.url}>{demo.display}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
