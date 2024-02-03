@@ -1,0 +1,16 @@
+---
+import Layout from '~/layouts/Layout.astro';
+const title = '@mcneilweb/ui';
+---
+
+<script>
+  import { ColorPicker } from '@mcneilweb/ui';
+  ColorPicker.define()
+</script>
+
+<Layout title={title}>
+  <main class="limit">
+    <h1>{title}</h1>
+    <color-picker></color-picker>
+  </main>
+</Layout>
