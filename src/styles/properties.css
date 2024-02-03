@@ -13,3 +13,11 @@
   /* Dimensions */
   --max-width: 1200px;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Semantics */
+    --bg: var(--dark);
+    --text: var(--light);
+  }
+}

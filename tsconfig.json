@@ -1,9 +1,13 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
+    "baseUrl": "D:/Repos/mcneilweb/demos",
     "paths": {
-      "~/*": ["src/*"]
-    }
+      "~/*": ["src/*"],
+      "@mcneilweb/sudoku": ["node_modules/@mcneilweb/sudoku/dist/index.*"],
+      "@mcneilweb/sudoku/*": ["node_modules/@mcneilweb/sudoku/dist/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
