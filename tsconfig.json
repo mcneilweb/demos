@@ -1,15 +1,16 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": ".",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
     "jsxImportSource": "react",
+    "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
       "@mcneilweb/sudoku": ["node_modules/@mcneilweb/sudoku/dist/index.*"],
       "@mcneilweb/sudoku/*": ["node_modules/@mcneilweb/sudoku/dist/*"],
       "@mcneilweb/ui": ["node_modules/@mcneilweb/ui/dist/index.*"],
-      "@mcneilweb/ui/*": ["node_modules/@mcneilweb/ui/dist/*"]
-    }
-  }
+      "@mcneilweb/ui/*": ["node_modules/@mcneilweb/ui/dist/*"],
+    },
+  },
 }
